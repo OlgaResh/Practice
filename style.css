@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&display=swap');
+
+:root {
+  --color-blue-700: #34547a;
+  --color-surface-primary: #eeeff1;
+  --color-surface-secondary: #34547a;
+
+  --color-text-primary: #000000;
+  --color-text-secondary: #727272;
+  --color-text-tertiary: #ffffff;
+  --color-text-accent: #34547a;
+
+  --container: 1100px;
+  --narrow: 540px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  color: var(--color-text-primary);
+  background: var(--color-surface-primary);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-surface-primary);
+}
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--color-surface-primary);
+}
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 45px; /* близько до макету */
+  padding-top: 79px;
+  padding-bottom: 0;
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.nav__link {
+  cursor: pointer;
+}
+.nav__link:hover {
+  color: var(--color-text-secondary);
+}
+
+.nav__link--active {
+  color: var(--color-text-accent);
+  cursor: default;
+}
+.hero {
+  background: var(--color-surface-primary);
+  padding-top: 120px; /* підганяє top ≈ 257px (разом з nav) */
+  padding-bottom: 120px;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.hero__text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.64;
+  color: var(--color-text-secondary);
+  margin-bottom: 65px;
+}
+
+.btn {
+  width: 225px;
+  height: 65px;
+  background: var(--color-blue-700);
+  color: var(--color-text-tertiary);
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.about {
+  background: #ffffff;
+}
+
+.about__content {
+  max-width: var(--narrow);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 100px;
+  text-align: center;
+  gap: 50px;
+}
+
+.about__title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.about__text {
+  font-size: 16px;
+  line-height: 1.64;
+  color: var(--color-text-secondary);
+}
+
+.stats {
+  background: var(--color-surface-secondary);
+}
+
+.stats__grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding-block: 100px;
+}
+
+.stats__item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.stats__icon {
+  width: 40px;
+  height: 40px;
+}
+
+.stats__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  color: var(--color-text-tertiary);
+  text-align: left;
+}
+
+.stats__number {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.stats__label {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.video {
+  background: var(--color-surface-primary);
+}
+
+.video__content {
+  max-width: var(--narrow);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  line-height: 1.64;
+  gap: 50px;
+  padding-block: 100px;
+}
+
+.video__title {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.video__text {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+}
+
+.video__box {
+  position: relative;
+  width: 800px;
+  max-width: 100%;
+}
+
+.video__box::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  pointer-events: none;
+}
+
+.video__bg {
+  width: 100%;
+  display: block;
+}
+
+.video__play {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.footer {
+  background: var(--color-surface-secondary);
+  color: var(--color-text-tertiary);
+}
+
+.footer__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-block: 50px;
+}
+
+.footer__name {
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.footer__copy {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.64;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-block: 3rem;
+  }
+
+  .hero__content {
+    height: auto;
+  }
+
+  .stats__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
