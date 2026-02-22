@@ -1,0 +1,25 @@
+@use '../abstracts' as *;
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+  gap: 45px;
+  padding-top: 79px; // ⭐ як було
+  padding-bottom: 0; // ⭐ як було
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+
+  &__link {
+    cursor: pointer;
+
+    &:hover {
+      color: $color-text-secondary;
+    }
+
+    &--active {
+      color: $color-text-accent;
+      cursor: default;
+    }
+  }
+}
