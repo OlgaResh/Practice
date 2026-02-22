@@ -1,0 +1,14 @@
+@use '../abstracts' as *;
+
+.btn {
+  width: 225px;
+  height: 65px;
+  background: $color-blue-700;
+  color: $color-text-tertiary;
+  border: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}

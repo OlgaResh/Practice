@@ -1,0 +1,24 @@
+@use '../abstracts' as *;
+
+.footer {
+  background: $color-surface-secondary;
+  color: $color-text-tertiary;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-block: 50px;
+  }
+
+  &__name {
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &__copy {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.64;
+  }
+}
